@@ -5,6 +5,9 @@
  */
 package ca.sheridancollege.project;
 
+import java.awt.Color;
+import jdk.internal.org.objectweb.asm.tree.analysis.Value;
+
 /**
  * A class to be used as the base Card class for the project. Must be general
  * enough to be instantiated for any Card game. Students wishing to add to the code 
@@ -12,10 +15,9 @@ package ca.sheridancollege.project;
  * @author dancye, 2018
  */
 public abstract class Card 
-        
 {
-    private  Color color;
-	private Value value;
+    private final Color color;
+	private final Value value;
 	private int attribute;
 
 	public Color getColor() {
@@ -36,8 +38,7 @@ public abstract class Card
 		// TODO - implement Card.getValues
 		throw new UnsupportedOperationException();
 	}
-    
-    public enum Color {
+        public enum Color {
 		RED,
 		BLUE,
 		GREEN,
@@ -58,6 +59,7 @@ public abstract class Card
 		NINE
 	}
 
+    
     @Override
     public abstract String toString();
     
